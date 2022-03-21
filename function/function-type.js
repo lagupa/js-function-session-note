@@ -1,5 +1,11 @@
 const { log } = console;
 
+/*
+ES - ECMAScipt
+
+
+*/
+
 // function key
 function getAge() {
 	// do somethings
@@ -21,6 +27,10 @@ const getUserCountry = function () {
 (function () {
 	log("IIEF Function");
 })();
+
+((name1, name2) => {
+	// do something
+})("Jon", "Daniel");
 
 (function foo1(age) {
 	console.log(age);

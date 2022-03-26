@@ -1,3 +1,4 @@
+const { log } = console;
 // Data types
 
 // Fundamental Data types
@@ -15,9 +16,22 @@
   - False
   - Truthy and Falsey Values: 2,"",(Assign: Find out all values are falsey and truthy?)
 
-- Nothingness: null, undefined
+- Nothingness: null, undefined;
 
 */
+
+let a;
+a = 0;
+a = 1;
+// a = "";
+// a = {};
+if (a) {
+	// do something
+	log(a + " is a truthy value");
+} else {
+	// do the opposite
+	log(a + " is a falsy value");
+}
 
 // Derived Data types
 /*

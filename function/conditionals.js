@@ -54,6 +54,8 @@ if (trafficLight === "red") {
 	log("drive");
 }
 
+// Assignment: convert code from line 45 to 55 using the ternary operator
+
 // Other conditional condition
 // Ternary operation
 trafficLight === "red" ? log("Stop!") : log("Go!"); // assignment: write else if version for this.

@@ -46,3 +46,15 @@ do {
 for (let x = 0; x < 6; x = x + 1) {
 	log(x);
 }
+
+// Assigment write a program to ask a user to give a password, accepted trial is 5 times.
+// build a form that ask: what is your password
+// get value that user has passed
+// tell: wrong password tried again or welcome if the password correct.
+// display number of tries if the user has put wrong password.
+/*
+- html
+- css (optional)
+- js
+
+*/

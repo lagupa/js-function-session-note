@@ -1,6 +1,6 @@
 import React from 'react'
 
-const CreateContact = () => {
+const CreateContact = ({ appX, isBlack }) => {
 
     const [contacts, setContacts] = React.useState({
         firstName:'',
@@ -26,13 +26,20 @@ const CreateContact = () => {
 
   return (
     <div>
+        {appX}
         <h2>Create Contact</h2>
-        <form onSubmit={handleSubmit}>
+        <div style = {{
+            background:isBlack ? "black": null,
+            color: isBlack ? "white": null,
+            padding:"1rem"
+        }}>
+       <form onSubmit={handleSubmit}>
             <input type="text"  value={firstName} name="firstName" onChange={handleChange} />
             <input type="text" value={lastName} name="lastName" onChange={handleChange} />
             <input type="email" value={email} name="email" onChange={handleChange} />
             <button type='submit'>create</button>
         </form>
+       </div>
     </div>
   )
 }

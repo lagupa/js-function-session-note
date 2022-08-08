@@ -29,17 +29,30 @@ function App() {
   }
  ]
 
+ const appName = "====== Contact app 1.0 ========="
+
+
  const [contacts, setContacts] = useState(initialState)
+ const [isBlack, setIsBlack] = React.useState(false)
+
+ const handleDarkMode = (arg) => {
+  console.log(arg)
+  setIsBlack(!isBlack)
+ }
 
  // CRUDL // L
+ // Unidirectional: Parent -> child
 
   return (
-    <div className="App">
+    <div style={{padding:"1rem 4rem"}} className="App">
+      <button onClick ={handleDarkMode}>{isBlack ? "light mode": "dark mode"}</button>
      <h1>Contact App 1.0</h1>
-     <ListContacts contacts={contacts}/>
-     <CreateContact />
+     <ListContacts handleDarkMode={handleDarkMode}  isBlack = {isBlack} appY = {appName} contacts={contacts}/>
+     <CreateContact  isBlack = {isBlack}  appX = {appName} />
     </div>
   );
 }
+
+
 
 export default App;

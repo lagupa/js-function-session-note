@@ -1,28 +1,30 @@
 import React from 'react'
 
-const CreateContact = ({ appX, isBlack }) => {
+const CreateContact = ({ appX, isBlack, saveContact }) => {
 
-    const [contacts, setContacts] = React.useState({
+    const [contact, setContact] = React.useState({
         firstName:'',
         lastName:"",
         email:""
     })
 
     const handleChange = (e) => {
-        setContacts({
-            ...contacts,
+        setContact({
+            ...contact,
             [e.target.name]:e.target.value
         })
     }
 
     const handleSubmit = (e) =>{
         e.preventDefault()
-        console.log(contacts)
+        // save to database here
+        // sending to App.js
+        saveContact(contact)
     }
 
 
 
-    const {firstName, lastName, email} = contacts;
+    const {firstName, lastName, email} = contact;
 
   return (
     <div>

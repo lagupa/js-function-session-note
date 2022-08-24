@@ -35,20 +35,35 @@ function App() {
  const [contacts, setContacts] = useState(initialState)
  const [isBlack, setIsBlack] = React.useState(false)
 
+
+ const saveContact = (contact) => {
+  // contacts.push(contact) // DON'T do this in react
+  setContacts([
+    ...contacts,
+    contact
+  ])
+}
+
+
+console.log(contacts)
+
  const handleDarkMode = (arg) => {
   console.log(arg)
   setIsBlack(!isBlack)
  }
 
- // CRUDL // L
+ // CRUDL //
  // Unidirectional: Parent -> child
+ // Create, list
+ // Read --- list,
 
   return (
     <div style={{padding:"1rem 4rem"}} className="App">
       <button onClick ={handleDarkMode}>{isBlack ? "light mode": "dark mode"}</button>
      <h1>Contact App 1.0</h1>
      <ListContacts handleDarkMode={handleDarkMode}  isBlack = {isBlack} appY = {appName} contacts={contacts}/>
-     <CreateContact  isBlack = {isBlack}  appX = {appName} />
+     <CreateContact saveContact = {saveContact}  isBlack = {isBlack}  appX = {appName} />
+
     </div>
   );
 }
@@ -56,3 +71,5 @@ function App() {
 
 
 export default App;
+
+

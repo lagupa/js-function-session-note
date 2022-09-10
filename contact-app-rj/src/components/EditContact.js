@@ -3,9 +3,14 @@ import React from 'react';
 const EditContact = ({ appX, isBlack, editContact, initialEditContact }) => {
   console.log(initialEditContact);
 
+  // Assignments
+  // -----
   // UseEffects
   // Unit testing
   // Debugging
+  // Delete
+
+  // Next Topic -> Simple JSON server
 
   const initialFormState = {
     firstName: '',

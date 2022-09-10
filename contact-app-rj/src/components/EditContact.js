@@ -1,19 +1,27 @@
 import React from 'react';
 
 const EditContact = ({ appX, isBlack, editContact, initialEditContact }) => {
-  const initalFormState = {
+  console.log(initialEditContact);
+
+  // UseEffects
+  // Unit testing
+  // Debugging
+
+  const initialFormState = {
     firstName: '',
     lastName: '',
     email: '',
   };
-  const [contact, setContact] = React.useState(
-    initialEditContact || initalFormState,
-  );
+  const [contact, setContact] = React.useState(initialFormState);
+
+  React.useEffect(() => {
+    setContact(initialEditContact);
+  }, [initialEditContact]);
 
   const handleChange = (e) => {
     setContact({
       ...contact,
-      [e.target.name]: e.target.value,
+      [e.target.name]: e.target.value, // let's avoid manual wiring.
     });
   };
 
@@ -25,7 +33,7 @@ const EditContact = ({ appX, isBlack, editContact, initialEditContact }) => {
     // save to database here
 
     // clear form fields
-    setContact(initalFormState);
+    setContact(initialFormState);
   };
 
   const { firstName, lastName, email } = contact;

@@ -42,9 +42,10 @@ function App() {
   };
   const editContact = (editingContact) => {
     // map
-    contacts.map(
-      (contact) => (contact.id = editingContact.id ? editingContact : contact),
+    const tContact = contacts.map((contact) =>
+      contact.id === editingContact.id ? editingContact : contact,
     );
+    setContacts(tContact);
   };
 
   const handleDarkMode = (arg) => {
@@ -56,9 +57,10 @@ function App() {
 
   const prepulateEditForm = (contact) => {
     console.log('prepulateEditForm');
-    console.log(contact);
     setInitialEditContact(contact);
   };
+
+  console.log(initialEditContact);
 
   // CRUDL //
   // Unidirectional: Parent -> child

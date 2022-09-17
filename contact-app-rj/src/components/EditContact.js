@@ -1,16 +1,61 @@
 import React from 'react';
 
 const EditContact = ({ appX, isBlack, editContact, initialEditContact }) => {
-  console.log(initialEditContact);
-
   // Assignments
-  // -----
+  // -------
   // UseEffects
   // Unit testing
   // Debugging
   // Delete
 
   // Next Topic -> Simple JSON server
+
+  // DRY => Do not Repeat Yourself
+
+  /*
+  Building Application
+
+  1. Client
+  - Is User Interface (UI)
+  - The frontend
+  - languages
+    - CSS
+    - HTML
+    - Javascript
+      - UI
+      - Mobiles iOS and Android
+      - Desktop application
+      - Server
+
+  2. Server
+  - No UI
+  - Backend
+  - languages
+    - Javascript (node js)
+    - Python
+    - C++
+    - C
+
+
+  - Javascript
+    - UI
+      - react js
+    - Mobiles iOS and Android
+      - react native
+    - Desktop application
+      - Electron js
+    - Server
+      - node js
+
+  Web application
+  - always runs browsers
+
+  Mobile application
+  - run on mobile phone
+
+  Desktop
+  - runs desktop/laptop computers
+  */
 
   const initialFormState = {
     firstName: '',

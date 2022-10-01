@@ -57,6 +57,26 @@ const EditContact = ({ appX, isBlack, editContact, initialEditContact }) => {
   - runs desktop/laptop computers
   */
 
+  /*
+  Self Studies
+  ----------------
+
+  - Source Truth: authority in that particular subject.
+
+  useEffect
+  - source truth: https://reactjs.org/docs/hooks-effect.html
+    - Problem: they are written in technical, it's not beginner friendly
+    - You must have the basic knowledge to understand most of the source true
+
+  - videos/articles: dev, medium, MDN,
+  - questions
+  - projects
+
+npm install -g json-server@latest
+  */
+
+  const p = 'star';
+
   const initialFormState = {
     firstName: '',
     lastName: '',

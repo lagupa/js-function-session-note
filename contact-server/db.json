@@ -1,0 +1,23 @@
+{
+  "contacts": [
+    {
+      "id": 1,
+      "firstName": "Lagu",
+      "lastName": "longa",
+      "email": "lagu.e@example.com"
+    },
+    {
+      "firstName": "Justin db",
+      "lastName": "Artema",
+      "email": "d.jada@example.com",
+      "id": 3
+    },
+    {
+      "firstName": "Joe db",
+      "lastName": "Doe",
+      "email": "jdoe.e@example.com",
+      "id": 4
+    }
+  ],
+  "todos": []
+}

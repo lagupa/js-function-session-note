@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ListContacts from './components/ListContact';
 import CreateContact from './components/CreatContact';
 import EditContact from './components/EditContact';
@@ -10,24 +10,24 @@ import './App.css';
 
 function App() {
   const initialState = [
-    {
-      id: 1,
-      firstName: 'Lagu',
-      lastName: 'longa',
-      email: 'lagu.e@example.com',
-    },
-    {
-      id: 2,
-      firstName: 'Daniel',
-      lastName: 'Jada',
-      email: 'komi.e@example.com',
-    },
-    {
-      id: 3,
-      firstName: 'Justin',
-      lastName: 'Artema',
-      email: 'ja_e@example.com',
-    },
+    // {
+    //   id: 1,
+    //   firstName: 'Lagu',
+    //   lastName: 'longa',
+    //   email: 'lagu.e@example.com',
+    // },
+    // {
+    //   id: 2,
+    //   firstName: 'Daniel',
+    //   lastName: 'Jada',
+    //   email: 'komi.e@example.com',
+    // },
+    // {
+    //   id: 3,
+    //   firstName: 'Justin',
+    //   lastName: 'Artema',
+    //   email: 'ja_e@example.com',
+    // },
   ];
 
   const appName = '====== Contact app 1.0 =========';
@@ -61,6 +61,25 @@ function App() {
   };
 
   console.log(initialEditContact);
+
+  // fetch api
+  // axios
+
+  const fetchContacts = async () => {
+    fetch('http://localhost:3000/contacts')
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        setContacts(data);
+      })
+      .catch(() => {
+        ///Exception occured do something
+      });
+  };
+
+  useEffect(() => {
+    fetchContacts();
+  }, []);
 
   // CRUDL //
   // Unidirectional: Parent -> child
